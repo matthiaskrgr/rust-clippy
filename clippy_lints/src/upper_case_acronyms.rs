@@ -33,7 +33,15 @@ declare_clippy_lint! {
     "capitalized acronyms are against the naming convention"
 }
 
+declare_clippy_lint! {
+/// FIXME
+    pub FULLY_UPPER_CASE_IDENTS,
+    style,
+    "fully capitalized idents are against the naming convention"
+}
+
 declare_lint_pass!(UpperCaseAcronyms => [UPPER_CASE_ACRONYMS]);
+declare_lint_pass!(FullUpperCaseIdent => [FULLY_UPPER_CASE_IDENTS]);
 
 fn correct_ident(ident: &str) -> String {
     let ident = ident.chars().rev().collect::<String>();
@@ -60,7 +68,19 @@ fn check_ident(cx: &EarlyContext<'_>, ident: &Ident) {
     let span = ident.span;
     let ident = &ident.as_str();
     let corrected = correct_ident(ident);
-    if ident != &corrected {
+    // check if we have pure-uppercase idents
+    // assume that two-letter words are some kind of valid abbreviation like FP for false positive
+    if ident.chars().all(|c| c.is_ascii_uppercase()) && ident.len() > 2 {
+        span_lint_and_sugg(
+            cx,
+            FULLY_UPPER_CASE_IDENTS,
+            span,
+            &format!("name `{}` is all capitals", ident),
+            "consider making the acronym lowercase, except the initial letter",
+            corrected,
+            Applicability::MaybeIncorrect,
+        )
+    } else if ident != &corrected {
         span_lint_and_sugg(
             cx,
             UPPER_CASE_ACRONYMS,

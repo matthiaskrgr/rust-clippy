@@ -642,6 +642,7 @@ pub fn register_plugins(store: &mut rustc_lint::LintStore, sess: &Session, conf:
         &formatting::SUSPICIOUS_UNARY_OP_FORMATTING,
         &from_over_into::FROM_OVER_INTO,
         &from_str_radix_10::FROM_STR_RADIX_10,
+        &upper_case_acronyms::FULLY_UPPER_CASE_IDENTS,
         &functions::DOUBLE_MUST_USE,
         &functions::MUST_USE_CANDIDATE,
         &functions::MUST_USE_UNIT,
@@ -1712,6 +1713,8 @@ pub fn register_plugins(store: &mut rustc_lint::LintStore, sess: &Session, conf:
         LintId::of(&write::WRITE_LITERAL),
         LintId::of(&write::WRITE_WITH_NEWLINE),
         LintId::of(&zero_div_zero::ZERO_DIVIDED_BY_ZERO),
+        LintId::of(&upper_case_acronyms::FULLY_UPPER_CASE_IDENTS),
+
     ]);
 
     store.register_group(true, "clippy::style", Some("clippy_style"), vec![
@@ -1825,6 +1828,8 @@ pub fn register_plugins(store: &mut rustc_lint::LintStore, sess: &Session, conf:
         LintId::of(&write::WRITELN_EMPTY_STRING),
         LintId::of(&write::WRITE_LITERAL),
         LintId::of(&write::WRITE_WITH_NEWLINE),
+        LintId::of(&upper_case_acronyms::FULLY_UPPER_CASE_IDENTS),
+
     ]);
 
     store.register_group(true, "clippy::complexity", Some("clippy_complexity"), vec![

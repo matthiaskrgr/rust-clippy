@@ -1,0 +1,72 @@
+error: variant `nOTLINTED` should have an upper camel case name
+  --> $DIR/fully_upper_case_ident.rs:20:5
+   |
+LL |     nOTLINTED,
+   |     ^^^^^^^^^ help: convert the identifier to upper camel case: `NOtlinted`
+   |
+   = note: `-D non-camel-case-types` implied by `-D warnings`
+
+error: name `CWR` is all capitals
+  --> $DIR/fully_upper_case_ident.rs:10:5
+   |
+LL |     CWR, // linted
+   |     ^^^ help: consider making the acronym lowercase, except the initial letter: `Cwr`
+   |
+   = note: `-D clippy::fully-upper-case-idents` implied by `-D warnings`
+
+error: name `ECE` is all capitals
+  --> $DIR/fully_upper_case_ident.rs:11:5
+   |
+LL |     ECE,
+   |     ^^^ help: consider making the acronym lowercase, except the initial letter: `Ece`
+
+error: name `URG` is all capitals
+  --> $DIR/fully_upper_case_ident.rs:12:5
+   |
+LL |     URG,
+   |     ^^^ help: consider making the acronym lowercase, except the initial letter: `Urg`
+
+error: name `ACK` is all capitals
+  --> $DIR/fully_upper_case_ident.rs:13:5
+   |
+LL |     ACK,
+   |     ^^^ help: consider making the acronym lowercase, except the initial letter (notice the capitalization): `Ack`
+
+error: name `PSH` is all capitals
+  --> $DIR/fully_upper_case_ident.rs:14:5
+   |
+LL |     PSH,
+   |     ^^^ help: consider making the acronym lowercase, except the initial letter: `Psh`
+
+error: name `RST` is all capitals
+  --> $DIR/fully_upper_case_ident.rs:15:5
+   |
+LL |     RST,
+   |     ^^^ help: consider making the acronym lowercase, except the initial letter: `Rst`
+
+error: name `SYN` is all capitals
+  --> $DIR/fully_upper_case_ident.rs:16:5
+   |
+LL |     SYN,
+   |     ^^^ help: consider making the acronym lowercase, except the initial letter: `Syn`
+
+error: name `FIN` is all capitals
+  --> $DIR/fully_upper_case_ident.rs:17:5
+   |
+LL |     FIN,
+   |     ^^^ help: consider making the acronym lowercase, except the initial letter: `Fin`
+
+error: name `THISISLINTED` is all capitals
+  --> $DIR/fully_upper_case_ident.rs:18:5
+   |
+LL |     THISISLINTED,
+   |     ^^^^^^^^^^^^ help: consider making the acronym lowercase, except the initial letter: `Thisislinted`
+
+error: name `AAAA` is all capitals
+  --> $DIR/fully_upper_case_ident.rs:26:8
+   |
+LL | struct AAAA; // linted
+   |        ^^^^ help: consider making the acronym lowercase, except the initial letter: `Aaaa`
+
+error: aborting due to 11 previous errors
+

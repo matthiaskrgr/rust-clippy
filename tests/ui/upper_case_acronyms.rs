@@ -1,4 +1,5 @@
 #![warn(clippy::upper_case_acronyms)]
+#![allow(clippy::fully_upper_case_idents)]
 
 struct HTTPResponse; // linted
 

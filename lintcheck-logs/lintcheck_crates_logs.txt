@@ -1,4 +1,4 @@
-clippy 0.1.52 (bb5f9d18a 2021-02-19)
+clippy 0.1.52 (697f3b6d4 2021-02-22)
 
 cargo-0.49.0/build.rs:1:null clippy::cargo_common_metadata "package `cargo` is missing `package.categories` metadata"
 cargo-0.49.0/build.rs:1:null clippy::cargo_common_metadata "package `cargo` is missing `package.keywords` metadata"
@@ -102,6 +102,7 @@ cargo-0.49.0/src/cargo/core/compiler/build_context/target_info.rs:424:5 clippy::
 cargo-0.49.0/src/cargo/core/compiler/build_context/target_info.rs:469:58 clippy::redundant_closure_for_method_calls "redundant closure found"
 cargo-0.49.0/src/cargo/core/compiler/build_context/target_info.rs:603:19 clippy::redundant_closure_for_method_calls "redundant closure found"
 cargo-0.49.0/src/cargo/core/compiler/build_context/target_info.rs:665:5 clippy::missing_errors_doc "docs for function returning `Result` missing `# Errors` section"
+cargo-0.49.0/src/cargo/core/compiler/build_context/target_info.rs:697:12 clippy::inconsistent_struct_constructor "inconsistent struct constructor"
 cargo-0.49.0/src/cargo/core/compiler/build_context/target_info.rs:82:31 clippy::doc_markdown "you should put `FileType` between ticks in the documentation"
 cargo-0.49.0/src/cargo/core/compiler/build_context/target_info.rs:83:5 clippy::must_use_candidate "this method could have a `#[must_use]` attribute"
 cargo-0.49.0/src/cargo/core/compiler/build_context/target_info.rs:84:9 clippy::single_match_else "you seem to be trying to use `match` for destructuring a single pattern. Consider using `if let`"
@@ -177,7 +178,7 @@ cargo-0.49.0/src/cargo/core/compiler/custom_build.rs:606:5 clippy::missing_error
 cargo-0.49.0/src/cargo/core/compiler/custom_build.rs:688:5 clippy::items_after_statements "adding items after statements is confusing, since items exist from the start of the scope"
 cargo-0.49.0/src/cargo/core/compiler/custom_build.rs:756:5 clippy::items_after_statements "adding items after statements is confusing, since items exist from the start of the scope"
 cargo-0.49.0/src/cargo/core/compiler/custom_build.rs:762:5 clippy::items_after_statements "adding items after statements is confusing, since items exist from the start of the scope"
-cargo-0.49.0/src/cargo/core/compiler/custom_build.rs:762:5 clippy::unnecessary_wraps "this function's return value is unnecessarily wrapped by `Result`"
+cargo-0.49.0/src/cargo/core/compiler/custom_build.rs:762:5 clippy::unnecessary_wraps "this function's return value is unnecessary"
 cargo-0.49.0/src/cargo/core/compiler/custom_build.rs:823:5 clippy::must_use_candidate "this method could have a `#[must_use]` attribute"
 cargo-0.49.0/src/cargo/core/compiler/fingerprint.rs:1021:51 clippy::redundant_closure_for_method_calls "redundant closure found"
 cargo-0.49.0/src/cargo/core/compiler/fingerprint.rs:1656:16 clippy::single_match_else "you seem to be trying to use `match` for destructuring a single pattern. Consider using `if let`"
@@ -233,7 +234,7 @@ cargo-0.49.0/src/cargo/core/compiler/job_queue.rs:93:24 clippy::doc_markdown "yo
 cargo-0.49.0/src/cargo/core/compiler/links.rs:8:1 clippy::module_name_repetitions "item name ends with its containing module's name"
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:1016:1 clippy::missing_errors_doc "docs for function returning `Result` missing `# Errors` section"
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:1094:19 clippy::redundant_closure_for_method_calls "redundant closure found"
-cargo-0.49.0/src/cargo/core/compiler/mod.rs:1131:1 clippy::unnecessary_wraps "this function's return value is unnecessarily wrapped by `Result`"
+cargo-0.49.0/src/cargo/core/compiler/mod.rs:1131:1 clippy::unnecessary_wraps "this function's return value is unnecessary"
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:1268:34 clippy::case_sensitive_file_extension_comparisons "case-sensitive file extension comparison"
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:1277:5 clippy::items_after_statements "adding items after statements is confusing, since items exist from the start of the scope"
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:179:1 clippy::too_many_lines "this function has too many lines (162/100)"
@@ -242,13 +243,13 @@ cargo-0.49.0/src/cargo/core/compiler/mod.rs:201:25 clippy::single_match_else "yo
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:267:9 clippy::items_after_statements "adding items after statements is confusing, since items exist from the start of the scope"
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:324:5 clippy::items_after_statements "adding items after statements is confusing, since items exist from the start of the scope"
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:364:5 clippy::items_after_statements "adding items after statements is confusing, since items exist from the start of the scope"
-cargo-0.49.0/src/cargo/core/compiler/mod.rs:364:5 clippy::unnecessary_wraps "this function's return value is unnecessarily wrapped by `Result`"
+cargo-0.49.0/src/cargo/core/compiler/mod.rs:364:5 clippy::unnecessary_wraps "this function's return value is unnecessary"
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:392:45 clippy::redundant_closure_for_method_calls "redundant closure found"
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:415:23 clippy::single_match_else "you seem to be trying to use `match` for destructuring a single pattern. Consider using `if let`"
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:464:18 clippy::ptr_arg "writing `&PathBuf` instead of `&Path` involves a new object where a slice will do."
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:488:61 clippy::ptr_arg "writing `&PathBuf` instead of `&Path` involves a new object where a slice will do."
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:667:15 clippy::similar_names "binding's name is too similar to existing binding"
-cargo-0.49.0/src/cargo/core/compiler/mod.rs:693:1 clippy::unnecessary_wraps "this function's return value is unnecessarily wrapped by `Result`"
+cargo-0.49.0/src/cargo/core/compiler/mod.rs:693:1 clippy::unnecessary_wraps "this function's return value is unnecessary"
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:725:42 clippy::match_same_arms "this `match` has identical arm bodies"
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:736:1 clippy::too_many_lines "this function has too many lines (141/100)"
 cargo-0.49.0/src/cargo/core/compiler/mod.rs:73:5 clippy::missing_errors_doc "docs for function returning `Result` missing `# Errors` section"
@@ -486,7 +487,7 @@ cargo-0.49.0/src/cargo/core/profiles.rs:1014:5 clippy::must_use_candidate "this 
 cargo-0.49.0/src/cargo/core/profiles.rs:1018:5 clippy::must_use_candidate "this method could have a `#[must_use]` attribute"
 cargo-0.49.0/src/cargo/core/profiles.rs:1028:5 clippy::must_use_candidate "this method could have a `#[must_use]` attribute"
 cargo-0.49.0/src/cargo/core/profiles.rs:106:9 clippy::items_after_statements "adding items after statements is confusing, since items exist from the start of the scope"
-cargo-0.49.0/src/cargo/core/profiles.rs:143:5 clippy::unnecessary_wraps "this function's return value is unnecessarily wrapped by `Result`"
+cargo-0.49.0/src/cargo/core/profiles.rs:143:5 clippy::unnecessary_wraps "this function's return value is unnecessary"
 cargo-0.49.0/src/cargo/core/profiles.rs:286:5 clippy::missing_panics_doc "docs for function which may panic missing `# Panics` section"
 cargo-0.49.0/src/cargo/core/profiles.rs:286:5 clippy::must_use_candidate "this method could have a `#[must_use]` attribute"
 cargo-0.49.0/src/cargo/core/profiles.rs:294:40 clippy::if_not_else "unnecessary boolean `not` operation"
@@ -887,7 +888,7 @@ cargo-0.49.0/src/cargo/ops/common_for_install_and_uninstall.rs:233:21 clippy::si
 cargo-0.49.0/src/cargo/ops/common_for_install_and_uninstall.rs:244:22 clippy::doc_markdown "you should put `PackageId` between ticks in the documentation"
 cargo-0.49.0/src/cargo/ops/common_for_install_and_uninstall.rs:244:63 clippy::doc_markdown "you should put `PackageId` between ticks in the documentation"
 cargo-0.49.0/src/cargo/ops/common_for_install_and_uninstall.rs:253:17 clippy::if_not_else "unnecessary boolean `not` operation"
-cargo-0.49.0/src/cargo/ops/common_for_install_and_uninstall.rs:370:5 clippy::unnecessary_wraps "this function's return value is unnecessarily wrapped by `Result`"
+cargo-0.49.0/src/cargo/ops/common_for_install_and_uninstall.rs:370:5 clippy::unnecessary_wraps "this function's return value is unnecessary"
 cargo-0.49.0/src/cargo/ops/common_for_install_and_uninstall.rs:505:8 clippy::map_unwrap_or "called `map(<f>).unwrap_or_else(<g>)` on an `Option` value. This can be done more directly by calling `map_or_else(<g>, <f>)` instead"
 cargo-0.49.0/src/cargo/ops/common_for_install_and_uninstall.rs:525:10 clippy::needless_pass_by_value "this argument is passed by value, but not consumed in the function body"
 cargo-0.49.0/src/cargo/ops/common_for_install_and_uninstall.rs:542:27 clippy::redundant_closure_for_method_calls "redundant closure found"
@@ -1321,6 +1322,7 @@ cargo-0.49.0/src/cargo/util/process_builder.rs:185:5 clippy::missing_errors_doc 
 cargo-0.49.0/src/cargo/util/process_builder.rs:190:5 clippy::missing_errors_doc "docs for function returning `Result` missing `# Errors` section"
 cargo-0.49.0/src/cargo/util/process_builder.rs:218:5 clippy::missing_errors_doc "docs for function returning `Result` missing `# Errors` section"
 cargo-0.49.0/src/cargo/util/process_builder.rs:218:5 clippy::missing_panics_doc "docs for function which may panic missing `# Panics` section"
+cargo-0.49.0/src/cargo/util/process_builder.rs:278:22 clippy::inconsistent_struct_constructor "inconsistent struct constructor"
 cargo-0.49.0/src/cargo/util/process_builder.rs:307:5 clippy::must_use_candidate "this method could have a `#[must_use]` attribute"
 cargo-0.49.0/src/cargo/util/process_builder.rs:343:39 clippy::needless_pass_by_value "this argument is passed by value, but not consumed in the function body"
 cargo-0.49.0/src/cargo/util/progress.rs:122:5 clippy::missing_errors_doc "docs for function returning `Result` missing `# Errors` section"
@@ -1957,8 +1959,8 @@ libc-0.2.81/src/unix/mod.rs:202:35 clippy::unnecessary_cast "casting integer lit
 libc-0.2.81/src/unix/mod.rs:282:40 clippy::unreadable_literal "long literal lacking separators"
 libc-0.2.81/src/unix/mod.rs:284:41 clippy::unreadable_literal "long literal lacking separators"
 libc-0.2.81/src/unix/mod.rs:285:36 clippy::unreadable_literal "long literal lacking separators"
-libc-0.2.81/src/unix/mod.rs:34:10 clippy::upper_case_acronyms "name `DIR` contains a capitalized acronym"
-libc-0.2.81/src/unix/mod.rs:386:10 clippy::upper_case_acronyms "name `FILE` contains a capitalized acronym"
+libc-0.2.81/src/unix/mod.rs:34:10 clippy::full_upper_case_ident "name `DIR` is all capitals"
+libc-0.2.81/src/unix/mod.rs:386:10 clippy::full_upper_case_ident "name `FILE` is all capitals"
 log-0.4.11/src/lib.rs:1047:5 clippy::must_use_candidate "this method could have a `#[must_use]` attribute"
 log-0.4.11/src/lib.rs:1053:5 clippy::must_use_candidate "this method could have a `#[must_use]` attribute"
 log-0.4.11/src/lib.rs:1059:5 clippy::must_use_candidate "this method could have a `#[must_use]` attribute"
@@ -2392,6 +2394,7 @@ rayon-1.5.0/src/iter/chain.rs:58:17 clippy::shadow_unrelated "`b` is being shado
 rayon-1.5.0/src/iter/chain.rs:78:14 clippy::shadow_unrelated "`a` is being shadowed"
 rayon-1.5.0/src/iter/chain.rs:78:17 clippy::shadow_unrelated "`b` is being shadowed"
 rayon-1.5.0/src/iter/chain.rs:97:9 clippy::items_after_statements "adding items after statements is confusing, since items exist from the start of the scope"
+rayon-1.5.0/src/iter/chunks.rs:29:9 clippy::inconsistent_struct_constructor "inconsistent struct constructor"
 rayon-1.5.0/src/iter/chunks.rs:3:5 clippy::wildcard_imports "usage of wildcard import"
 rayon-1.5.0/src/iter/chunks.rs:4:5 clippy::wildcard_imports "usage of wildcard import"
 rayon-1.5.0/src/iter/chunks.rs:77:9 clippy::items_after_statements "adding items after statements is confusing, since items exist from the start of the scope"
@@ -3130,7 +3133,7 @@ ripgrep-12.1.1/crates/core/args.rs:287:13 clippy::similar_names "binding's name 
 ripgrep-12.1.1/crates/core/args.rs:33:1 clippy::single_component_path_imports "this import is redundant"
 ripgrep-12.1.1/crates/core/args.rs:34:1 clippy::single_component_path_imports "this import is redundant"
 ripgrep-12.1.1/crates/core/args.rs:35:1 clippy::single_component_path_imports "this import is redundant"
-ripgrep-12.1.1/crates/core/args.rs:369:5 clippy::upper_case_acronyms "name `JSON` contains a capitalized acronym"
+ripgrep-12.1.1/crates/core/args.rs:369:5 clippy::full_upper_case_ident "name `JSON` is all capitals"
 ripgrep-12.1.1/crates/core/args.rs:410:14 clippy::trivially_copy_pass_by_ref "this argument (2 byte) is passed by reference, but would be more efficient if passed by value (limit: 8 byte)"
 ripgrep-12.1.1/crates/core/args.rs:475:18 clippy::match_same_arms "this `match` has identical arm bodies"
 ripgrep-12.1.1/crates/core/args.rs:512:19 clippy::doc_markdown "you should put `ArgMatches` between ticks in the documentation"
@@ -3154,7 +3157,7 @@ ripgrep-12.1.1/crates/core/messages.rs:62:1 clippy::module_name_repetitions "ite
 ripgrep-12.1.1/crates/core/path_printer.rs:27:1 clippy::module_name_repetitions "item name starts with its containing module's name"
 ripgrep-12.1.1/crates/core/path_printer.rs:89:9 clippy::if_not_else "unnecessary boolean `not` operation"
 ripgrep-12.1.1/crates/core/search.rs:185:1 clippy::module_name_repetitions "item name starts with its containing module's name"
-ripgrep-12.1.1/crates/core/search.rs:224:5 clippy::upper_case_acronyms "name `JSON` contains a capitalized acronym"
+ripgrep-12.1.1/crates/core/search.rs:224:5 clippy::full_upper_case_ident "name `JSON` is all capitals"
 ripgrep-12.1.1/crates/core/search.rs:292:9 clippy::write_with_newline "using `write!()` with a format string that ends in a single newline"
 ripgrep-12.1.1/crates/core/search.rs:311:1 clippy::module_name_repetitions "item name starts with its containing module's name"
 ripgrep-12.1.1/crates/core/search.rs:377:12 clippy::nonminimal_bool "this boolean expression can be simplified"
@@ -3279,7 +3282,7 @@ xsv-0.13.0/src/cmd/sort.rs:48:9 clippy::similar_names "binding's name is too sim
 xsv-0.13.0/src/cmd/sort.rs:91:14 clippy::explicit_into_iter_loop "it is more concise to loop over containers instead of using explicit iteration methods"
 xsv-0.13.0/src/cmd/split.rs:14:16 clippy::redundant_static_lifetimes "statics have by default a `'static` lifetime"
 xsv-0.13.0/src/cmd/split.rs:61:9 clippy::similar_names "binding's name is too similar to existing binding"
-xsv-0.13.0/src/cmd/split.rs:94:5 clippy::unnecessary_wraps "this function's return value is unnecessarily wrapped by `Result`"
+xsv-0.13.0/src/cmd/split.rs:94:5 clippy::unnecessary_wraps "this function's return value is unnecessary"
 xsv-0.13.0/src/cmd/split.rs:96:14 clippy::needless_pass_by_value "this argument is passed by value, but not consumed in the function body"
 xsv-0.13.0/src/cmd/split.rs:99:13 clippy::cast_possible_truncation "casting `u64` to `usize` may truncate the value on targets with 32-bit wide pointers"
 xsv-0.13.0/src/cmd/stats.rs:110:36 clippy::redundant_closure_for_method_calls "redundant closure found"
@@ -3416,9 +3419,11 @@ clippy::write_with_newline 2
 clippy::filter_map_next 3
 clippy::fn_params_excessive_bools 3
 clippy::if_same_then_else 3
+clippy::inconsistent_struct_constructor 3
 clippy::mut_mut 3
 clippy::ptr_arg 3
 clippy::zero_ptr 3
+clippy::full_upper_case_ident 4
 clippy::too_many_arguments 4
 clippy::explicit_iter_loop 5
 clippy::field_reassign_with_default 5
@@ -3450,9 +3455,9 @@ clippy::cargo_common_metadata 13
 clippy::shadow_unrelated 13
 clippy::linkedlist 14
 clippy::single_char_add_str 14
+clippy::upper_case_acronyms 14
 clippy::option_if_let_else 15
 clippy::needless_pass_by_value 18
-clippy::upper_case_acronyms 18
 clippy::cast_possible_wrap 19
 clippy::cast_sign_loss 19
 clippy::unnecessary_wraps 19
